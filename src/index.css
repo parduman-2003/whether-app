@@ -1,0 +1,185 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  /* Aligning items to the top */
+  min-height: 100vh;
+  height: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Weather App Container */
+.weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  /* Aligning all elements to the top */
+  gap: 2rem;
+  width: 100%;
+  max-width: 1300px;
+  padding: 2rem;
+  flex-wrap: wrap; /* For mobile responsiveness */
+}
+
+/* Main Big Card Container */
+.main-card {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1300px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  flex-wrap: wrap; /* For responsiveness */
+  box-sizing: border-box;
+}
+
+/* Today's Weather Card Styling */
+.today-weather {
+  flex: 1;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.today-weather:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.today-weather h3 {
+  color: #4a90e2;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.weather-info {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* SearchBox Card Styling */
+.searchbox-elements {
+  flex: 1;
+  padding: 2.5rem;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.searchbox-elements:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.searchbox-elements input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.searchbox-elements input:focus {
+  border-color: #4a90e2;
+}
+
+/* 5 Days Forecast Card Styling */
+.forecast-info {
+  flex: 2; /* Make this card twice as wide as Today's Weather and SearchBox */
+  padding: 2rem;
+  background: #f1f7fc;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.forecast-info:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.forecast-info h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.forecast-day {
+  margin: 1.5rem 0;
+  padding: 1.2rem;
+  border-bottom: 1px solid #ddd;
+  transition: background 0.3s ease;
+}
+
+.forecast-day:last-child {
+  border-bottom: none;
+}
+
+.forecast-day:hover {
+  background-color: #e9f2fe;
+}
+
+.forecast-day p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  /* Adjusting the layout for mobile */
+  .weather-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-card {
+    flex-direction: column;
+  }
+
+  .today-weather,
+  .searchbox-elements,
+  .forecast-info {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .today-weather h3 {
+    font-size: 1.7rem;
+  }
+
+  .weather-info {
+    font-size: 1.1rem;
+  }
+
+  .forecast-info h4 {
+    font-size: 1.6rem;
+  }
+
+  .forecast-day p {
+    font-size: 1rem;
+  }
+}
